@@ -1,0 +1,33 @@
+SLBC (SURVIVOR LIFE BUSINESS CENTER ?
+
+inscription/carte verte 
+Registration/ green card 
+
+Cette inscription doit aboutir à la fin du processus à générer un matricule qui sera propre Au user dans notre BD ou serveur.
+Dès que le user clique sur ce bouton... une page déroule Et cette page recherche deux informations 
+👉 le nom et prénom du user
+👉 ID ASN
+
+dès que le user renseigne ces deux informations...
+Il clic sur suivant 
+
+C'est à ce moment que les informations données par le USER seront transmis à SURVIVORWALLETSYSTEME pour vérification 
+Le retour des informations Va déterminer si Oui où non la prochaine page va s'ouvrir...car pour que elle s'ouvre Les informations renseignées par le user doivent exister vraiment dans walletsysteme
+Une fois les informations sont vraies... la deuxième page s'ouvre 
+
+👉 Le nom donné par le user reviens seul 
+👉 email 
+👉 numéro téléphone avec l'indicatif du pays 
+👉 date de naissance 
+👉 Username 
+👉 le mot de passe ( majuscule,minuscule, chiffres et caractère particulier)
+👉 le pays 
+👉 la ville
+
+L'inscription à la SLBC se fait uniquement que via un lien d'affiliation... dans un système linéaire à 3 niveau 
+Fils 
+Petit fils
+Arrière petit fils 
+
+Gain fils : 4BV
+Gain petit fils : 4BV
