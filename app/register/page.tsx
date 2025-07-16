@@ -9,10 +9,9 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { ArrowLeft, ArrowRight, CheckCircle, User, CreditCard, Lock } from "lucide-react"
-import Link from "next/link"
 import { useLanguage } from "@/contexts/language-context"
-import { ThemeLanguageToggle } from "@/components/theme-language-toggle"
 import Image from "next/image"
+import { Header } from "@/components/header"
 
 interface UserData {
   name: string
@@ -146,26 +145,17 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 py-8 px-4">
-      <div className="container mx-auto max-w-2xl">
-        <div className="mb-8 flex justify-between items-center">
-          <Link href="/" className="inline-flex items-center gap-2 text-primary hover:text-primary/80">
-            <ArrowLeft className="h-4 w-4" />
-            {t("back")} {t("home")}
-          </Link>
-          <ThemeLanguageToggle />
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-primary/5 to-primary/10">
+      <Header />
 
+      <div className="container mx-auto px-4 py-8 flex items-center justify-center min-h-[calc(100vh-80px)]">
         <Card className="shadow-xl">
           <CardHeader className="text-center">
-            <div className="mb-4">
-              <Image src="/logo.png" alt="SLBC Logo" width={80} height={80} className="mx-auto" />
-            </div>
             <CardTitle className="text-2xl font-bold">{t("register")} SLBC</CardTitle>
             <CardDescription>{t("join_slbc_community")}</CardDescription>
 
             {/* Progress Steps */}
-            <div className="flex justify-center items-center gap-4 mt-6">
+            <div className="flex justify-center items-center gap-4 mt-10">
               <div className={`flex items-center gap-2 ${currentStep >= 1 ? "text-green-600" : "text-gray-400"}`}>
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center ${currentStep >= 1 ? "bg-green-600 text-white" : "bg-gray-200"}`}
