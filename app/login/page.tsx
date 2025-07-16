@@ -13,6 +13,7 @@ import { useLanguage } from "@/contexts/language-context"
 import { Header } from "@/components/header"
 import { loginUser, type LoginRequest } from "@/lib/api"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function LoginPage() {
   const { t } = useLanguage()
@@ -63,9 +64,9 @@ export default function LoginPage() {
             <div className="mb-4">
               <Image src="/logo.png" alt="SLBC Logo" width={80} height={80} className="mx-auto" />
             </div>
-            <CardTitle className="text-2xl font-bold">{t("login")} SLBC</CardTitle>
+            <CardTitle className="text-2xl font-bold">SLBC</CardTitle>
             <CardDescription>
-              {t("welcome")} - {t("dashboard")}
+              Survivor Life Business Center
             </CardDescription>
           </CardHeader>
 

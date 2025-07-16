@@ -14,6 +14,18 @@ export const translations = {
     light: "Clair",
     dark: "Sombre",
 
+    // Forms
+    name: "Nom",
+    firstname: "Prénom",
+    email: "Email",
+    phone: "Téléphone",
+    password: "Mot de passe",
+    confirmPassword: "Confirmer le mot de passe",
+    country: "Pays",
+    city: "Ville",
+    birthdate: "Date de naissance",
+    username: "Nom d'utilisateur",
+
     // Hero Section
     heroTitle: "Bienvenue à SLBC – Survivor Life Business Center",
     heroSubtitle:
@@ -72,24 +84,56 @@ export const translations = {
     millionaireClub: "Millionaire Club",
     millionaireClubDesc: "Espace de formation et d'opportunités Web3 exclusives pour membres premium.",
 
+    // Register
+    asn_verification: "Vérification ASN",
+    information: "Informations",
+    payment: "Paiement",
+    your_lastname: "Votre nom de famille",
+    your_firstname: "Votre prénom",
+    asn_code: "ID ASN",
+    your_asn_code: "Votre ID ASN",
+    verifying: "Vérification...",
+    asn_member_required: "Vous devez être membre de l'ASN d'abord",
+    verification_error: "Erreur lors de la vérification. Veuillez réessayer.",
+    passwords_mismatch: "Les mots de passe ne correspondent pas",
+    password_length_error: "Le mot de passe doit contenir au moins 8 caractères",
+    registration_code_required: "Veuillez saisir le code d'inscription",
+
+    repeat_password: "Répétez le mot de passe",
+    select_country: "Sélectionnez votre pays",
+    your_city: "Votre ville",
+    summary: "Récapitulatif",
+    equivalent_10000_fcfa: "Équivalent: 10,000 FCFA",
+    equivalent_20_usd: "Équivalent: 20 USD",
+    payment_method: "Moyen de paiement",
+    choose_payment_method: "Choisissez votre moyen de paiement",
+    registration_code: "Code du Parrain",
+    enter_registration_code: "Saisissez le code de votre parrain",
+    code_after_payment: "Ce code vous sera fourni après confirmation du paiement",
+    finalize_registration: "Finaliser l'inscription",
+    username_placeholder: "Nom Utilisateur",
+    registration_complete: "Inscription complète. Vous recevrez votre matricule par SMS.",
+    join_slbc_community: "Rejoignez la communauté Survivor Life Business Center",
+    next: "Suivant",
+    previous: "Précédent",
+    min_8_characters: "Min 8 caractères",
+    confirm_password: "Confirmer le mot de passe",
     // Login
     emailOrUsername: "Email ou Nom d'utilisateur",
-    password: "Mot de passe",
     loginButton: "Se connecter",
     loginError: "Identifiants incorrects",
     loginSuccess: "Connexion réussie",
-    emailPlaceholder: "votre@email.com ou nom_utilisateur",
+    emailPlaceholder: "Votre@email.com ou Nom Utilisateur",
     passwordPlaceholder: "Votre mot de passe",
+    not_a_member_yet: "Pas encore membre ? ",
+    register_now: "S'inscrire maintenant",
+
 
     // Dashboard
     personalInfo: "Informations personnelles",
     fullName: "Nom complet",
     matricule: "Matricule SLBC",
     balance: "Solde",
-    email: "Email",
-    phone: "Téléphone",
-    username: "Nom d'utilisateur",
-    country: "Pays",
 
     // Gains
     gains: "Gains",
@@ -144,6 +188,8 @@ export const translations = {
     theme: "Theme",
     light: "Light",
     dark: "Dark",
+
+    
 
     // Hero Section
     heroTitle: "Welcome to SLBC – Survivor Life Business Center",
@@ -200,24 +246,67 @@ export const translations = {
     millionaireClub: "Millionaire Club",
     millionaireClubDesc: "Training space and exclusive Web3 opportunities for premium members.",
 
+    // Register
+    asn_verification: "ASN Verification",
+    information: "Information",
+    payment: "Payment",
+    your_lastname: "Your Last Name",
+    your_firstname: "Your First Name",
+    asn_code: "ASN ID",
+    your_asn_code: "Your ASN ID",
+    verifying: "Verifying...",
+    asn_member_required: "You must be a member of ASN first",
+    verification_error: "Verification failed. Please try again.",
+    passwords_mismatch: "Passwords do not match",
+    password_length_error: "Password must be at least 8 characters long",
+    registration_code_required: "Please enter the registration code",
+
+    // Forms
+    name: "Last Name",
+    firstname: "First Name",
+    email: "Email",
+    phone: "Phone",
+    password: "Password",
+    confirmPassword: "Confirm Password",
+    country: "Country",
+    city: "City",
+    birthdate: "Date of Birth",
+    username: "Username",
+
     // Login
     emailOrUsername: "Email or Username",
-    password: "Password",
     loginButton: "Sign In",
     loginError: "❌ Incorrect Credentials",
     loginSuccess: "Login successful",
     emailPlaceholder: "your@email.com or username",
     passwordPlaceholder: "Your password",
+    not_a_member_yet: "Not Yet Subscriber ? ",
+    register_now: "Register Now",
+
 
     // Dashboard
     personalInfo: "Personal Information",
     fullName: "Full Name",
     matricule: "SLBC Registration Number",
     balance: "Balance",
-    email: "Email",
-    phone: "Phone",
-    username: "Username",
-    country: "Country",
+
+    summary: "Summary",
+    equivalent_10000_fcfa: "Equivalent: 10,000 FCFA",
+    equivalent_20_usd: "Equivalent: 20 USD",
+    payment_method: "Payment Method",
+    choose_payment_method: "Choose your payment method",
+    registration_code: "Referral Code",
+    enter_registration_code: "Enter your referral code",
+    code_after_payment: "This code will be provided after payment confirmation",
+    finalize_registration: "Complete Registration",
+    username_placeholder: "Username",
+    registration_complete: "Registration complete. You will receive your ID by SMS.",
+    join_slbc_community: "Join the Survivor Life Business Center community",
+    next: "Next",
+    previous: "Previous",
+    min_8_characters: "Min 8 characters",
+    confirm_password: "Confirm Password",
+
 
     // Gains
     gains: "Earnings",
