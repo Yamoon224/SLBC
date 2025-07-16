@@ -10,7 +10,9 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "SLBC - Survivor Life Business Center",
   description: "Le booster de richesse communautaire",
-    generator: 'v0.dev'
+  icons: {
+    icon: "/logo.png",
+  },
 }
 
 export default function RootLayout({
