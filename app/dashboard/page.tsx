@@ -152,7 +152,7 @@ export default function DashboardPage() {
             </TabsTrigger>
             <TabsTrigger value="withdraw" className="flex items-center gap-2">
               <Wallet className="h-4 w-4" />
-              <span className="hidden sm:inline">Retrait</span>
+              <span className="hidden sm:inline">{t("withdraws")}</span>
             </TabsTrigger>
           </TabsList>
 
@@ -241,7 +241,7 @@ export default function DashboardPage() {
                 ) : (
                   <div className="text-center py-8 text-muted-foreground">
                     <TrendingUp className="h-12 w-12 mx-auto mb-4 opacity-50" />
-                    <p>Aucun gain pour le moment</p>
+                    <p>{t("notearnyet")}</p>
                   </div>
                 )}
               </CardContent>
@@ -253,7 +253,7 @@ export default function DashboardPage() {
             <Card>
               <CardHeader>
                 <CardTitle>{t("affiliationTree")}</CardTitle>
-                <CardDescription>Votre réseau d'affiliés sur 3 niveaux</CardDescription>
+                <CardDescription>{t("affiliationsnetwork")}</CardDescription>
               </CardHeader>
               <CardContent>
                 <AffiliationTree affiliates={user.children || []} level={1} />
@@ -265,7 +265,7 @@ export default function DashboardPage() {
           <TabsContent value="withdraw">
             <Card>
               <CardHeader>
-                <CardTitle>Demande de retrait</CardTitle>
+                <CardTitle>{t("makewithdraws")}</CardTitle>
                 <CardDescription>
                   {t("balance")}: {user.balance} PV ({user.balance * 500} FCFA)
                 </CardDescription>
@@ -273,9 +273,9 @@ export default function DashboardPage() {
               <CardContent>
                 <div className="text-center py-8">
                   <Wallet className="h-16 w-16 mx-auto mb-4 text-muted-foreground" />
-                  <h3 className="text-lg font-semibold mb-2">Faire une demande de retrait</h3>
+                  <h3 className="text-lg font-semibold mb-2">{t("makewithdrawrequest")}</h3>
                   <p className="text-muted-foreground mb-6">
-                    Cliquez sur le bouton ci-dessous pour initier une demande de retrait
+                    {t("descriptionwithdraw")}
                   </p>
                   <Button onClick={() => setShowWithdrawForm(true)} size="lg">
                     <Wallet className="mr-2 h-5 w-5" />

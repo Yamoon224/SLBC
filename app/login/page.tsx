@@ -19,7 +19,7 @@ export default function LoginPage() {
   const { t } = useLanguage()
   const router = useRouter()
   const [formData, setFormData] = useState<LoginRequest>({
-    email: "",
+    login: "",
     password: "",
   })
   const [loading, setLoading] = useState(false)
@@ -85,8 +85,8 @@ export default function LoginPage() {
                   id="email"
                   type="text"
                   required
-                  value={formData.email}
-                  onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
+                  value={formData.login}
+                  onChange={(e) => setFormData((prev) => ({ ...prev, login: e.target.value }))}
                   placeholder={t("emailPlaceholder")}
                 />
               </div>

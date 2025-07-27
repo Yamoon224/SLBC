@@ -155,6 +155,13 @@ export const translations = {
     cancel: "Annuler",
     withdrawSuccess: "✅ Retrait demandé avec succès",
     withdrawError: "❌ Une erreur est survenue",
+    withdraws: "Retraits",
+    makewithdraws: "Demande de retrait",
+    makewithdrawrequest: "Faire une demande de retrait",
+    descriptionwithdraw: "Cliquez sur le bouton ci-dessous pour initier une demande de retrait.",
+
+    affiliationsnetwork: "Votre réseau d'affiliés sur 3 niveaux",
+    notearnyet: "Aucun gain pour le moment",
 
     // Affiliations
     affiliations: "Affiliations",
@@ -317,7 +324,14 @@ export const translations = {
     grandson: "Grandson",
     greatGrandson: "Great-grandson",
     makeWithdraw: "Make Withdrawal",
+    withdraws: "Withdrawals",
+    makewithdrawrequest: "Make Withdrawal Request",
+    descriptionwithdraw: "Click the button below to initiate a withdrawal request.",
+    makewithdraws: "Withdrawal Request",
 
+    affiliationsnetwork: "Your 3-level affiliate network",
+    notearnyet: "No earnings yet",
+    
     // Withdraw Form
     withdrawForm: "Withdrawal Form",
     projectName: "Related Project",

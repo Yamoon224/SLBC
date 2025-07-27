@@ -1,9 +1,9 @@
-// Configuration API
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL
+// Configuration API : assure-toi que .env.local contient NEXT_PUBLIC_API_BASE_URL=https://ton-backend.com
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || ''
 
-
+// Interfaces
 export interface LoginRequest {
-  email: string
+  login: string
   password: string
 }
 
@@ -50,67 +50,77 @@ export interface WithdrawRequest {
   description: string
 }
 
-// API Functions
+// API : Authentification
 export async function loginUser(credentials: LoginRequest): Promise<LoginResponse> {
   try {
     const formData = new FormData()
-    formData.append("email", credentials.email)
-    formData.append("password", credentials.password)
+    formData.append('login', credentials.login)
+    formData.append('password', credentials.password)
 
-    const response = await fetch(`${API_BASE_URL}/withdraws`, {
-      method: "POST",
+    const response = await fetch(`${API_BASE_URL}/auth`, {
+      method: 'POST',
       body: formData,
     })
 
+    console.log(response);
+
     if (!response.ok) {
-      throw new Error("Network response was not ok")
+      const errorData = await response.json().catch(() => null)
+      return {
+        auth: false,
+        message: errorData?.message || 'Erreur réseau lors de la connexion.',
+        user: null,
+      }
     }
 
-    return await response.json()
+    const data = await response.json()
+    return data
   } catch (error) {
-    console.error("Login error:", error)
+    console.error('Login error:', error)
     return {
       auth: false,
-      message: "Erreur de connexion",
+      message: 'Erreur de connexion',
       user: null,
     }
   }
 }
 
+// API : Retrait
 export async function submitWithdraw(withdrawData: WithdrawRequest): Promise<{ success: boolean; message: string }> {
   try {
     const formData = new URLSearchParams()
-    formData.append("user_id", withdrawData.user_id.toString())
-    formData.append("project_name", withdrawData.project_name)
-    formData.append("matricule_slbc", withdrawData.matricule_slbc)
-    formData.append("method_paiement", withdrawData.method_paiement)
-    formData.append("amount", withdrawData.amount.toString())
-    formData.append("description", withdrawData.description)
+    formData.append('user_id', withdrawData.user_id.toString())
+    formData.append('project_name', withdrawData.project_name)
+    formData.append('matricule_slbc', withdrawData.matricule_slbc)
+    formData.append('method_paiement', withdrawData.method_paiement)
+    formData.append('amount', withdrawData.amount.toString())
+    formData.append('description', withdrawData.description)
 
-    const response = await fetch(`${API_BASE_URL}/login`, {
-      method: "POST",
+    const response = await fetch(`${API_BASE_URL}/withdraws`, {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
+        'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: formData,
+      body: formData.toString(),
     })
 
     if (response.ok) {
       return {
         success: true,
-        message: "Retrait demandé avec succès",
+        message: 'Retrait demandé avec succès',
       }
     } else {
+      const errorData = await response.json().catch(() => null)
       return {
         success: false,
-        message: "Une erreur est survenue",
+        message: errorData?.message || 'Une erreur est survenue',
       }
     }
   } catch (error) {
-    console.error("Withdraw error:", error)
+    console.error('Withdraw error:', error)
     return {
       success: false,
-      message: "Une erreur est survenue",
+      message: 'Une erreur est survenue',
     }
   }
 }
