@@ -2,7 +2,8 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useSearchParams } from "next/navigation" // Next 13+ App Router
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -23,6 +24,7 @@ interface UserData {
 }
 
 export default function RegisterPage() {
+  const searchParams = useSearchParams()
   const [currentStep, setCurrentStep] = useState(1)
   const [loading, setLoading] = useState(false)
   const [userData, setUserData] = useState<UserData | null>(null)
@@ -70,6 +72,14 @@ export default function RegisterPage() {
     "États-Unis": ["PayPal", "Stripe", "Zelle"],
     default: ["PayPal", "Virement bancaire"],
   }
+
+  // Récupération du paramètre "code" à l'initialisation
+  useEffect(() => {
+    const codeParam = searchParams.get("code")
+    if (codeParam) {
+      setFormData((prev) => ({ ...prev, registrationCode: codeParam }))
+    }
+  }, [searchParams])
 
   const handleStep1Submit = async (e: React.FormEvent) => {
     e.preventDefault()
