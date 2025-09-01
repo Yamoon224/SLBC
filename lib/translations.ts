@@ -162,6 +162,8 @@ export const translations = {
 
     affiliationsnetwork: "Votre réseau d'affiliés sur 3 niveaux",
     notearnyet: "Aucun gain pour le moment",
+    registration_error: "Erreur lors de l'enregistrement",
+    network_error: "Erreur de Réseau",
 
     // Affiliations
     affiliations: "Affiliations",
@@ -267,6 +269,8 @@ export const translations = {
     passwords_mismatch: "Passwords do not match",
     password_length_error: "Password must be at least 8 characters long",
     registration_code_required: "Please enter the registration code",
+    registration_error: "Register Error",
+    network_error: "Network Error",
 
     // Forms
     name: "Last Name",
