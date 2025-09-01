@@ -74,6 +74,15 @@ export default function RegisterPage() {
         "Autre",
     ]
 
+    // Récupération du paramètre "code" à l'initialisation
+    useEffect(() => {
+        const codeParam = searchParams.get("code")
+        if (codeParam) {
+            setFormData((prev) => ({ ...prev, registrationCode: codeParam }))
+        }
+    }, [searchParams])
+
+
     const paymentMethods = {
         Cameroun: ["Orange Money", "MTN Mobile Money", "Express Union"],
         "Côte d'Ivoire": ["Orange Money", "MTN Mobile Money", "Moov Money"],
@@ -436,7 +445,7 @@ export default function RegisterPage() {
                                                     : t("equivalent_20_usd")}
                                             </p>
                                         </div>
-        
+
                                         <div>
                                             <Label htmlFor="paymentMethod">{t("payment_method")} *</Label>
                                             <Select
@@ -455,7 +464,7 @@ export default function RegisterPage() {
                                                 </SelectContent>
                                             </Select>
                                         </div>
-        
+
                                         <div>
                                             <Label htmlFor="registrationCode">{t("registration_code")} *</Label>
                                             <Input
@@ -468,7 +477,7 @@ export default function RegisterPage() {
                                             />
                                             <p className="text-sm text-gray-600 mt-1">{t("code_after_payment")}</p>
                                         </div>
-        
+
                                         <div className="flex gap-4">
                                             <Button type="button" variant="outline" onClick={() => setCurrentStep(2)}>
                                                 <ArrowLeft className="mr-2 h-4 w-4" />
